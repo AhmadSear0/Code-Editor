@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.code-editor {
+    width: 95vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #1e1e2f;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.code-editor:hover {
+    transform: scale(1.02);
+}
+
+.code {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #2a2a40;
+    border-right: 1px solid #3e3e5a;
+    overflow-y: auto;
+}
+
+.code h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #57d9ff;
+    text-transform: uppercase;
+}
+
+.code textarea {
+    width: 100%;
+    height: calc(100% - 2rem);
+    background-color: #1e1e2f;
+    color: #fff;
+    border: 1px solid #3e3e5a;
+    padding: 1rem;
+    font-size: 1rem;
+    resize: none;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code textarea:focus {
+    outline: none;
+    border-color: #57d9ff;
+    box-shadow: 0 0 10px rgba(87, 217, 255, 0.7);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .code-editor {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+    }
+
+    .code {
+        border-right: none;
+        border-bottom: 1px solid #3e3e5a;
+    }
+}
+
+#banner {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #1e1e2f;
+    /* border: 0.5px solid #ccc; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    width: 250px;
+    border-radius: 10px;
+  }
+  #close-btn {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+  }
